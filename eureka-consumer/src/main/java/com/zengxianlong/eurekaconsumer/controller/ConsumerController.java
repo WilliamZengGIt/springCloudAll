@@ -16,6 +16,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -121,5 +122,6 @@ public class ConsumerController {
         restTemplate.delete("http://eureka-provider/user1?id={1}",99);
         restTemplate.delete("http://eureka-provider/user2/{1}",99);
     }
+
 
 }

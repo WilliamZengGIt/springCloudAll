@@ -28,6 +28,11 @@ public class RegisterController {
     public String loginPage(String name){
         return "loginPage:"+name;
     }
+    @GetMapping("/user")
+    @ResponseBody
+    public void user(Integer id){
+        System.out.println(id);
+    }
     @DeleteMapping("/user1")
     public void deleteUser1(Integer id){
         System.out.println(id);
