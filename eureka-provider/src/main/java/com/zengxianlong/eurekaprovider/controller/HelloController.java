@@ -1,7 +1,6 @@
 package com.zengxianlong.eurekaprovider.controller;
 
 import com.zengxianlong.eurekaprovider.dto.User;
-import org.apache.catalina.startup.UserConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
@@ -14,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URLEncoder;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -107,4 +107,13 @@ public class HelloController {
          String s=restTemplate.getForObject(uri,String.class);
          System.out.println(s);
     }
+
+    @GetMapping("/hello7")
+    public String hello7(String name){
+        System.out.println(new Date()+">>>"+name);
+        return "hello"+name;
+    }
+
+
+
 }
